@@ -3,18 +3,19 @@ import 'package:provider/provider.dart';
 import '../models/appdata.dart';
 
 class HomePage extends StatelessWidget {
-  TextStyle styles = TextStyle(
+  TextStyle styles = const TextStyle(
     fontSize: 15,
     fontWeight: FontWeight.bold,
     fontFamily: 'Helvetica Neue',
     color: Colors.black,
   );
+
   @override
   Widget build(BuildContext context) {
     return Consumer<AppData>(
       builder: (ctx, appdata, child) => Scaffold(
         appBar: AppBar(
-          title: Text('Home'),
+          title: const Text('Home'),
           centerTitle: true,
         ),
         body: Center(
@@ -22,7 +23,7 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                margin: EdgeInsets.only(bottom: 30),
+                margin: const EdgeInsets.only(bottom: 30),
                 child: Text(
                   'Bem vindo(a) ao',
                   style: styles,
@@ -33,7 +34,7 @@ class HomePage extends StatelessWidget {
                 width: 200,
               ),
               Container(
-                margin: EdgeInsets.only(top: 20),
+                margin: const EdgeInsets.only(top: 20),
                 child: Text('Seu guia de viagem perfeito', style: styles),
               ),
             ],
